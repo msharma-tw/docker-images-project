@@ -1,0 +1,3 @@
+ignored:
+  - DL3020 # Use COPY instead of ADD for files and folders. (We use add for better buildkit caching) https://github.com/hadolint/hadolint/wiki/DL3020
+  - DL3033 # Specify version with yum install -y <package>-<version>. (We don't do this now to ensure we get the latest packages.) https://github.com/hadolint/hadolint/wiki/DL3033
