@@ -7,11 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestSample(t *testing.T) {
+func TestRuby(t *testing.T) {
 	//Below method is known as buildDockerImage Method
-
-	// runs in parallel if we have multiple tests
-	// t.Parallel()
 
 	// Configure the tag to use on the Docker image.
 	tag := "testruby"
@@ -20,7 +17,7 @@ func TestSample(t *testing.T) {
 	}
 
 	// Build the Docker image.
-	path := "../../images/ruby/2.6-builder-ubi8"
+	path := "../../images/language-based-images/ruby-image/2.6-builder-ubi8"
 	docker.Build(t, path, buildOptions)
 
 	// Run the Docker image, execute the command, and make sure it contains the expected output.
